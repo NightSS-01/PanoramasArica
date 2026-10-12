@@ -1,0 +1,26 @@
+# Python y Django
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.env
+*.log
+
+# Archivos generados por Django
+backend/staticfiles/
+backend/media/
+
+# Node.js y TypeScript
+node_modules/
+dist/
+coverage/
+npm-debug.log*
+
+# Editores
+.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
