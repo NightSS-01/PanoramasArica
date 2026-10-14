@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "actividadId": 1,
+    "usuarioCorreo": "ana.perez@correo.example",
+    "fecha": "2026-11-07",
+    "participantes": 2,
+    "estadoPago": "pendiente",
+    "creadaEn": "2026-10-10T14:30:00"
+  },
+  {
+    "id": 2,
+    "actividadId": 2,
+    "usuarioCorreo": "ana.perez@correo.example",
+    "fecha": "2026-11-09",
+    "participantes": 1,
+    "estadoPago": "pendiente",
+    "creadaEn": "2026-10-11T09:15:00"
+  },
+  {
+    "id": 3,
+    "actividadId": 3,
+    "usuarioCorreo": "luis.soto@correo.example",
+    "fecha": "2026-11-12",
+    "participantes": 4,
+    "estadoPago": "pendiente",
+    "creadaEn": "2026-10-11T18:45:00"
+  },
+  {
+    "id": 4,
+    "actividadId": 7,
+    "usuarioCorreo": "luis.soto@correo.example",
+    "fecha": "2026-11-14",
+    "participantes": 3,
+    "estadoPago": "pendiente",
+    "creadaEn": "2026-10-12T11:00:00"
+  },
+  {
+    "id": 5,
+    "actividadId": 1,
+    "usuarioCorreo": "marta.vera@correo.example",
+    "fecha": "2026-11-08",
+    "participantes": 5,
+    "estadoPago": "pendiente",
+    "creadaEn": "2026-10-12T20:20:00"
+  }
+]

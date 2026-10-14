@@ -1,0 +1,108 @@
+[
+  {
+    "id": 1,
+    "titulo": "Tour al Morro de Arica",
+    "descripcion": "Recorrido guiado por el Morro con historia de la ciudad y vista panorámica.",
+    "modalidad": "reservable",
+    "proveedorId": 1,
+    "ubicacion": "Morro de Arica",
+    "imagen": "/images/morro.jpg",
+    "precio": 12000,
+    "publicada": true,
+    "disponibilidad": [
+      { "fecha": "2026-11-07", "cupos": 15 },
+      { "fecha": "2026-11-08", "cupos": 10 },
+      { "fecha": "2026-11-14", "cupos": 15 }
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "Surf en playa El Laucho",
+    "descripcion": "Clase introductoria de surf con equipo incluido y monitor certificado.",
+    "modalidad": "reservable",
+    "proveedorId": 1,
+    "ubicacion": "Playa El Laucho",
+    "imagen": "/images/surf.jpg",
+    "precio": 25000,
+    "publicada": true,
+    "disponibilidad": [
+      { "fecha": "2026-11-09", "cupos": 8 },
+      { "fecha": "2026-11-16", "cupos": 8 }
+    ]
+  },
+  {
+    "id": 3,
+    "titulo": "Ruta gastronómica del Valle de Azapa",
+    "descripcion": "Degustación de aceitunas, aceite y productos locales en el valle.",
+    "modalidad": "reservable",
+    "proveedorId": 3,
+    "ubicacion": "Valle de Azapa",
+    "imagen": "/images/azapa.jpg",
+    "precio": 18000,
+    "publicada": true,
+    "disponibilidad": [
+      { "fecha": "2026-11-12", "cupos": 12 },
+      { "fecha": "2026-11-19", "cupos": 12 }
+    ]
+  },
+  {
+    "id": 4,
+    "titulo": "Feria artesanal del puerto",
+    "descripcion": "Feria abierta con artesanía y productos locales. No requiere reserva.",
+    "modalidad": "difusion",
+    "proveedorId": 2,
+    "ubicacion": "Terminal Pesquero",
+    "imagen": "/images/feria.jpg",
+    "precio": null,
+    "publicada": true,
+    "disponibilidad": []
+  },
+  {
+    "id": 5,
+    "titulo": "Muestra de cine en el Museo de Azapa",
+    "descripcion": "Ciclo de cine regional con entrada liberada hasta completar aforo.",
+    "modalidad": "difusion",
+    "proveedorId": 2,
+    "ubicacion": "Museo Arqueológico San Miguel de Azapa",
+    "imagen": "/images/cine.jpg",
+    "precio": null,
+    "publicada": true,
+    "disponibilidad": [{ "fecha": "2026-11-21", "cupos": 0 }]
+  },
+  {
+    "id": 6,
+    "titulo": "Festival de música en la Plaza Colón",
+    "descripcion": "Presentaciones de bandas locales. Información y programa de la jornada.",
+    "modalidad": "difusion",
+    "proveedorId": 2,
+    "ubicacion": "Plaza Colón",
+    "imagen": "/images/festival.jpg",
+    "precio": null,
+    "publicada": true,
+    "disponibilidad": []
+  },
+  {
+    "id": 7,
+    "titulo": "Limpieza de playa Chinchorro",
+    "descripcion": "Jornada de voluntariado con cupos limitados. Se entregan guantes y bolsas.",
+    "modalidad": "reservable_sin_fines_de_lucro",
+    "proveedorId": 2,
+    "ubicacion": "Playa Chinchorro",
+    "imagen": "/images/playa.jpg",
+    "precio": null,
+    "publicada": true,
+    "disponibilidad": [{ "fecha": "2026-11-14", "cupos": 30 }]
+  },
+  {
+    "id": 8,
+    "titulo": "Taller de reforestación en Azapa",
+    "descripcion": "Plantación de especies nativas junto a la comunidad del valle.",
+    "modalidad": "reservable_sin_fines_de_lucro",
+    "proveedorId": 3,
+    "ubicacion": "Valle de Azapa",
+    "imagen": "/images/reforestacion.jpg",
+    "precio": null,
+    "publicada": false,
+    "disponibilidad": [{ "fecha": "2026-12-05", "cupos": 20 }]
+  }
+]

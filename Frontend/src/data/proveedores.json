@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nombre": "Camila Rojas",
+    "organizacion": "Arica Aventura Tours",
+    "correo": "camila@aricaaventura.example"
+  },
+  {
+    "id": 2,
+    "nombre": "Matías Flores",
+    "organizacion": "Corporación Cultural Costa Norte",
+    "correo": "matias@costanorte.example"
+  },
+  {
+    "id": 3,
+    "nombre": "Daniela Quispe",
+    "organizacion": "Sabores del Valle de Azapa",
+    "correo": "daniela@saboresazapa.example"
+  }
+]
