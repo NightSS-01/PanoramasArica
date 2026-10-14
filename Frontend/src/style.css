@@ -1,0 +1,147 @@
+/* header */
+:root {
+  --color-acento: #ee4d07;
+  --color-fondo: #fcfbf9;
+  --color-borde: #e8e6e1;
+  --color-texto: #1a1a1a;
+}
+
+body {
+  background: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+.app-navbar {
+  background: var(--color-fondo);
+  border-bottom: 1px solid var(--color-borde);
+  padding-block: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.brand-kicker {
+  color: var(--color-acento);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.app-navbar .nav-link {
+  color: var(--color-texto);
+  font-size: 0.9rem;
+}
+
+.text-accent {
+  color: var(--color-acento);
+}
+
+.nav-divider {
+  display: inline-block;
+  width: 1px;
+  height: 28px;
+  background: var(--color-borde);
+  margin-inline: 0.5rem;
+}
+
+.btn-pill {
+  border-radius: 999px;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.btn-outline-pill {
+  background: #fff;
+  border: 1px solid var(--color-borde);
+  color: var(--color-texto);
+}
+
+.btn-accent {
+  background: var(--color-acento);
+  border-color: var(--color-acento);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(238, 77, 7, 0.3);
+}
+
+.btn-accent:hover {
+  background: #d44304;
+  border-color: #d44304;
+  color: #fff;
+}
+
+
+/* footer */
+.app-footer {
+  background: #1c1815;
+  color: #b9b4ad;
+}
+
+.footer-marca {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.footer-texto {
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.footer-titulo {
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer-lista li {
+  margin-bottom: 0.65rem;
+}
+
+.footer-lista a {
+  color: #b9b4ad;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.footer-lista a:hover {
+  color: #fff;
+}
+
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #3a3530;
+  border-radius: 50%;
+  color: #b9b4ad;
+}
+
+.footer-social:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.footer-linea {
+  border-color: #3a3530;
+  opacity: 1;
+}
+
+.footer-kicker {
+  color: #8a847c;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+}
+
+.footer-colaboradores {
+  color: #b9b4ad;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
