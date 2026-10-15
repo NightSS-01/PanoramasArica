@@ -1,0 +1,30 @@
+{% load static %}
+<article class="tarjeta">
+  <div class="tarjeta__imagen" style="background-image: url('{% static imagen %}')">
+    <span class="tarjeta__badge {{ badge_clase }}">{{ badge }}</span>
+    <span class="tarjeta__lugar"><i class="bi bi-geo-alt"></i> {{ lugar }}</span>
+  </div>
+
+  <div class="tarjeta__cuerpo">
+    <div class="tarjeta__meta">
+      <span><i class="bi bi-calendar3"></i> {{ fecha }}</span>
+      <span><i class="bi bi-clock"></i> {{ horario }}</span>
+    </div>
+
+    <h3 class="tarjeta__titulo">{{ titulo }}</h3>
+    <p class="tarjeta__texto">{{ descripcion }}</p>
+
+    <div class="tarjeta__pie">
+      <div>
+        <small class="tarjeta__desde">Desde</small>
+        <p class="tarjeta__precio">{{ precio }} {% if moneda %}<span>{{ moneda }}</span>{% endif %}</p>
+      </div>
+      <a href="#" class="tarjeta__flecha" aria-label="Ver detalle"><i class="bi bi-arrow-right"></i></a>
+    </div>
+
+    <div class="tarjeta__cupos">
+      <span><i class="bi bi-people"></i> {{ cupos }} cupos disponibles</span>
+      <span class="tarjeta__punto"></span>
+    </div>
+  </div>
+</article>
