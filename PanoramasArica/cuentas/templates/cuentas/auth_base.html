@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<div class="auth-card row g-0">
+  <div class="col-lg-6 auth-imagen d-none d-lg-flex">
+    <div class="mt-auto">
+      <p class="auth-kicker-claro">TU NORTE, TUS PANORAMAS</p>
+      <h2 class="auth-titulo-claro">Guarda tus próximas aventuras en un solo lugar.</h2>
+      <ul class="list-unstyled auth-beneficios">
+        <li><span class="auth-check">✓</span> Reservas y comprobantes siempre disponibles</li>
+        <li><span class="auth-check">✓</span> Acceso rápido a tu cuenta</li>
+        <li><span class="auth-check">✓</span> Recomendaciones para descubrir Arica</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-12 col-lg-6 auth-formulario">
+    <a href="{% url 'inicio' %}" class="auth-volver">← Volver a experiencias</a>
+    {% block formulario %}{% endblock %}
+  </div>
+</div>
+{% endblock %}

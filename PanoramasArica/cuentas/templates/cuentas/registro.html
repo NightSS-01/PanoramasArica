@@ -1,0 +1,29 @@
+{% extends 'cuentas/auth_base.html' %}
+
+{% block titulo %}Crear cuenta · Panoramas Arica{% endblock %}
+
+{% block formulario %}
+<p class="auth-kicker">ÚNETE A PANORAMAS ARICA</p>
+<h1 class="auth-titulo">Crea tu cuenta</h1>
+<p class="text-muted mb-4">Regístrate con tu correo para guardar tus reservas.</p>
+
+<form method="post" novalidate>
+  {% csrf_token %}
+
+  {% for campo in form %}
+    <div class="mb-3">
+      <label for="{{ campo.id_for_label }}" class="form-label auth-label">{{ campo.label }} *</label>
+      {{ campo }}
+      {% for error in campo.errors %}
+        <div class="text-danger small mt-1">{{ error }}</div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+
+  <button type="submit" class="btn btn-accent btn-pill w-100 py-2">Crear cuenta</button>
+</form>
+
+<p class="text-center small mt-4 mb-0">
+  ¿Ya tienes cuenta? <a href="{% url 'cuentas:login' %}" class="auth-enlace">Inicia sesión</a>
+</p>
+{% endblock %}
