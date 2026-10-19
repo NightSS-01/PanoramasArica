@@ -1,41 +1,32 @@
-{% extends 'base.html' %} {% load static %} {% block titulo %}Mis reservas ·
-Panoramas Arica{% endblock %} {% block contenido %}
-<link rel="stylesheet" href="{% static './reservas.css' %}" />
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}Mis reservas · Panoramas Arica{% endblock %}
+
+{% block contenido %}
+<link rel="stylesheet" href="{% static './reservas.css' %}">
 
 <section class="mr-encabezado">
   <div>
     <p class="mr-etiqueta">TU CUENTA</p>
     <h1 class="mr-titulo">Mis reservas</h1>
-    <p class="mr-subtitulo">
-      Revisa tus próximas experiencias y el historial de panoramas.
-    </p>
+    <p class="mr-subtitulo">Revisa tus próximas experiencias y el historial de panoramas.</p>
   </div>
-  <a href="{% url 'inicio' %}" class="mr-boton-claro"
-    >Explorar actividades <i class="bi bi-arrow-right"></i
-  ></a>
+  <a href="{% url 'inicio' %}" class="mr-boton-claro">Explorar actividades <i class="bi bi-arrow-right"></i></a>
 </section>
 
 <nav class="mr-pestanas">
-  <a
-    href="?pestana=proximas"
-    class="mr-pestana {% if pestana == 'proximas' %}mr-pestana--activa{% endif %}"
-  >
+  <a href="?pestana=proximas" class="mr-pestana {% if pestana == 'proximas' %}mr-pestana--activa{% endif %}">
     Próximas <span class="mr-contador">{{ total_proximas }}</span>
   </a>
-  <a
-    href="?pestana=historial"
-    class="mr-pestana {% if pestana == 'historial' %}mr-pestana--activa{% endif %}"
-  >
+  <a href="?pestana=historial" class="mr-pestana {% if pestana == 'historial' %}mr-pestana--activa{% endif %}">
     Historial <span class="mr-contador">{{ total_historial }}</span>
   </a>
 </nav>
 
 {% for r in reservas %}
 <article class="mr-tarjeta">
-  <div
-    class="mr-tarjeta__imagen"
-    style="background-image: url(&quot;{% static r.imagen %}&quot;)"
-  >
+  <div class="mr-tarjeta__imagen" style="background-image: url('{% static r.imagen %}')">
     <span class="mr-badge mr-badge--{{ r.estado }}">{{ r.estado_texto }}</span>
   </div>
 
@@ -47,10 +38,7 @@ Panoramas Arica{% endblock %} {% block contenido %}
         <p class="mr-proveedor">{{ r.proveedor }}</p>
       </div>
       <div class="mr-total">
-        <small
-          >{% if r.estado == 'pendiente_pago' %}Total por pagar{% else %}Total{%
-          endif %}</small
-        >
+        <small>{% if r.estado == 'pendiente_pago' %}Total por pagar{% else %}Total{% endif %}</small>
         <p>{{ r.total }} <span>CLP</span></p>
       </div>
     </div>
@@ -58,32 +46,20 @@ Panoramas Arica{% endblock %} {% block contenido %}
     <div class="mr-datos">
       <div class="mr-dato">
         <i class="bi bi-calendar3"></i>
-        <div>
-          <small>Fecha y hora</small><strong>{{ r.fecha_hora }}</strong>
-        </div>
+        <div><small>Fecha y hora</small><strong>{{ r.fecha_hora }}</strong></div>
       </div>
       <div class="mr-dato">
         <i class="bi bi-geo-alt"></i>
-        <div>
-          <small>Punto de encuentro</small
-          ><strong>{{ r.punto_encuentro }}</strong>
-        </div>
+        <div><small>Punto de encuentro</small><strong>{{ r.punto_encuentro }}</strong></div>
       </div>
       <div class="mr-dato">
         <i class="bi bi-people"></i>
-        <div>
-          <small>Asistentes</small
-          ><strong
-            >{{ r.asistentes }} persona{{ r.asistentes|pluralize }}</strong
-          >
-        </div>
+        <div><small>Asistentes</small><strong>{{ r.asistentes }} persona{{ r.asistentes|pluralize }}</strong></div>
       </div>
     </div>
 
     {% if r.estado == 'pendiente_pago' %}
-    <a href="#" class="mr-boton"
-      >Completar pago <i class="bi bi-arrow-right"></i
-    ></a>
+      <a href="#" class="mr-boton">Completar pago <i class="bi bi-arrow-right"></i></a>
     {% endif %}
   </div>
 </article>
