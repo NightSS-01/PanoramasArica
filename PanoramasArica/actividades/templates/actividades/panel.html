@@ -12,7 +12,8 @@
       <p class="panel-subtitulo">Administra tus publicaciones, reservas y pagos desde un solo lugar.</p>
     </div>
     <div class="panel-acciones">
-      <a href="#" class="btn-panel btn-panel--claro">Solicitar soporte</a>
+      <button type="button" class="btn-panel btn-panel--claro"
+        data-bs-toggle="modal" data-bs-target="#modal-soporte">Solicitar soporte</button>
       <button type="button" class="btn-panel btn-panel--acento"
         data-bs-toggle="modal" data-bs-target="#modal-crear-actividad">+ Crear actividad</button>
     </div>
@@ -202,6 +203,55 @@
           <div class="modal-footer modal-actividad__pie">
             <button type="button" class="modal-actividad__cancelar" data-bs-dismiss="modal">Cancelar</button>
             <button type="button" class="btn-panel btn-panel--acento">Crear actividad</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-soporte" tabindex="-1"
+       aria-labelledby="modal-soporte-titulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content modal-actividad">
+        <div class="modal-header modal-actividad__cabecera">
+          <div>
+            <small class="panel-etiqueta">SOPORTE AL PROVEEDOR</small>
+            <h2 class="modal-actividad__titulo" id="modal-soporte-titulo">¿Cómo podemos ayudarte?</h2>
+          </div>
+          <button type="button" class="modal-actividad__cerrar"
+                  data-bs-dismiss="modal" aria-label="Cerrar">&times;</button>
+        </div>
+
+        <form id="form-soporte" class="modal-actividad__form">
+          <div class="modal-body modal-actividad__cuerpo">
+            <div class="campo">
+              <label for="sop-tipo">Tipo de problema *</label>
+              <select id="sop-tipo" class="campo__control">
+                <option value="" selected disabled>Selecciona una categoría</option>
+                <option>Problema con una publicación</option>
+                <option>Reservas o asistentes</option>
+                <option>Pagos y transferencias</option>
+                <option>Acceso a mi cuenta</option>
+                <option>Otro problema</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="sop-descripcion">Descripción del problema *</label>
+              <textarea id="sop-descripcion" rows="5" class="campo__control"
+                        placeholder="Cuéntanos qué ocurrió e incluye todos los detalles que puedan ayudarnos…"></textarea>
+            </div>
+
+            <div class="campo">
+              <label for="sop-correo">Correo de contacto *</label>
+              <input type="email" id="sop-correo" class="campo__control"
+                     value="contacto@nortevivo.cl">
+            </div>
+          </div>
+
+          <div class="modal-footer modal-actividad__pie">
+            <button type="button" class="modal-actividad__cancelar" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn-panel btn-panel--acento">Enviar solicitud</button>
           </div>
         </form>
       </div>
