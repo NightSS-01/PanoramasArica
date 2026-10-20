@@ -9,11 +9,10 @@ body {
   background: var(--color-fondo);
   color: var(--color-texto);
 }
-
 .app-navbar {
-  background: var(--color-fondo);
-  border-bottom: 1px solid var(--color-borde);
-  padding-block: 0.9rem;
+  background: #F1F5F9;
+  border-bottom: 1px solid;
+  padding-block: 0.3rem;
 }
 
 .brand-kicker {
