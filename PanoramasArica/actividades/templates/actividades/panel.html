@@ -90,7 +90,14 @@
             <p class="fila-actividad__datos">14 jun 2025 · 10 cupos · $12.000</p>
           </div>
           <div class="fila-actividad__acciones">
-            <button type="button" class="btn-fila">Ver en detalle</button>
+            <button type="button" class="btn-fila btn-ver-detalle" 
+            data-bs-toggle="modal" data-bs-target="#modal-detalle"
+            data-titulo="Avistamiento de aves costeras"
+            data-descripcion="Una mañana de observación y fotografía de la biodiversidad del humedal del río Lluta."
+            data-modalidad="Reservable"
+            data-precio="$12.000"
+            data-reservable="si"
+            data-imagen="{% static 'actividades/img/aves.jpg' %}">Ver en detalle</button>
             <button type="button" class="btn-fila">Editar</button>
             <button type="button" class="btn-fila btn-fila--gris">Ocultar</button>
           </div>
@@ -107,7 +114,14 @@
             <p class="fila-actividad__datos">8 jun 2025 · 7 cupos · $18.000</p>
           </div>
           <div class="fila-actividad__acciones">
-            <button type="button" class="btn-fila">Ver en detalle</button>
+            <button type="button" class="btn-fila btn-ver-detalle"
+            data-bs-toggle="modal" data-bs-target="#modal-detalle"
+            data-titulo="Trekking Cuevas de Anzota"
+            data-descripcion="Caminata guiada por la costa de Anzota, con paradas en miradores y cuevas marinas."
+            data-modalidad="Reservable"
+            data-precio="$18.000"
+            data-reservable="si"
+            data-imagen="{% static 'actividades/img/cuevas.jpg' %}">Ver en detalle</button>
             <button type="button" class="btn-fila">Editar</button>
             <button type="button" class="btn-fila btn-fila--gris">Ocultar</button>
           </div>
@@ -124,7 +138,14 @@
             <p class="fila-actividad__datos">21 jun 2025 · 100 cupos · Sin costo</p>
           </div>
           <div class="fila-actividad__acciones">
-            <button type="button" class="btn-fila">Ver en detalle</button>
+            <button type="button" class="btn-fila btn-ver-detalle"
+            data-bs-toggle="modal" data-bs-target="#modal-detalle"
+            data-titulo="Festival Sabores del Norte"
+            data-descripcion="Una jornada de gastronomía regional con productores, música y degustaciones."
+            data-modalidad="Difusión"
+            data-precio=""
+            data-reservable="no"
+            data-imagen="{% static 'actividades/img/carnaval.jpg' %}">Ver en detalle</button>
             <button type="button" class="btn-fila">Editar</button>
             <button type="button" class="btn-fila btn-fila--gris">Publicar</button>
           </div>
@@ -316,4 +337,60 @@
       </div>
     </div>
   </div>
+
+  <div class="modal fade" id="modal-detalle" tabindex="-1"
+       aria-labelledby="modal-detalle-titulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content modal-actividad">
+        <div class="modal-header modal-actividad__cabecera">
+          <div>
+            <small class="panel-etiqueta">ASÍ LA VERÁN LOS USUARIOS</small>
+            <h2 class="modal-actividad__titulo" id="modal-detalle-titulo">Vista previa de la publicación</h2>
+          </div>
+          <button type="button" class="modal-actividad__cerrar"
+                  data-bs-dismiss="modal" aria-label="Cerrar">&times;</button>
+        </div>
+
+        <div class="modal-body modal-actividad__cuerpo">
+          <article class="vista-previa">
+            <img id="detalle-imagen" class="vista-previa__imagen" src="" alt="">
+            <div class="vista-previa__cuerpo">
+              <span id="detalle-modalidad" class="etiqueta-modalidad"></span>
+              <h3 id="detalle-titulo" class="vista-previa__titulo"></h3>
+              <p id="detalle-descripcion" class="vista-previa__descripcion"></p>
+              <div class="vista-previa__pie">
+                <div>
+                  <small id="detalle-desde" class="vista-previa__desde">Desde</small>
+                  <div id="detalle-precio" class="vista-previa__precio"></div>
+                </div>
+                <button type="button" id="detalle-reservar" class="btn-panel btn-panel--acento">Reservar</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const modalDetalle = document.getElementById('modal-detalle');
+
+  modalDetalle.addEventListener('show.bs.modal', function (evento) {
+    const boton = evento.relatedTarget;
+
+    document.getElementById('detalle-imagen').src = boton.dataset.imagen;
+    document.getElementById('detalle-imagen').alt = boton.dataset.titulo;
+    document.getElementById('detalle-modalidad').textContent = boton.dataset.modalidad.toUpperCase();
+    document.getElementById('detalle-titulo').textContent = boton.dataset.titulo;
+    document.getElementById('detalle-descripcion').textContent = boton.dataset.descripcion;
+
+    const precio = boton.dataset.precio;
+    document.getElementById('detalle-precio').textContent = precio || 'Sin costo';
+    document.getElementById('detalle-desde').hidden = !precio;
+
+    document.getElementById('detalle-reservar').hidden = boton.dataset.reservable !== 'si';
+  });
+</script>
 {% endblock %}
