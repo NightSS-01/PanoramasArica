@@ -487,3 +487,71 @@ textarea.campo__control {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
+
+/* Cabecera en columna (título arriba, subtítulo abajo) */
+.lista-card__cabecera--columna {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+/* Tabla de reservas */
+.tabla-scroll {
+  overflow-x: auto;
+}
+
+.tabla-reservas {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.tabla-reservas th {
+  background: #fafaf8;
+  color: #8a8a8a;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #ececec;
+}
+
+.tabla-reservas td {
+  padding: 1.1rem 1.5rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #f0f0f0;
+  white-space: nowrap;
+}
+
+.tabla-reservas tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.tabla-reservas__codigo {
+  color: #c2410c;
+  font-weight: 700;
+}
+
+.tabla-reservas__cliente,
+.tabla-reservas__total {
+  font-weight: 700;
+}
+
+.tabla-reservas__suave {
+  color: #6b6b6b;
+}
+
+/* Etiquetas de estado de pago */
+.pago {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+}
+
+.pago--pagado { background: #e3f6ec; color: #047857; }
+.pago--pendiente { background: #fff4d6; color: #c2410c; }
+.pago--reembolsado { background: #efefef; color: #6b6b6b; }
