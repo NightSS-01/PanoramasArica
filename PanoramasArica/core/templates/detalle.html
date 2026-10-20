@@ -1,0 +1,97 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block titulo %}{{ actividad.titulo }} | Panoramas Arica{% endblock %}
+
+{% block contenido %}
+<a href="{% url 'inicio' %}" class="detalle__volver">← Volver a los panoramas</a>
+
+<header class="detalle__cabecera">
+  <div>
+    <span class="tarjeta__badge detalle__badge {{ actividad.badge_clase }}">{{ actividad.badge }}</span>
+    <h1 class="detalle__titulo">{{ actividad.titulo }}</h1>
+    <p class="detalle__lugar"><i class="bi bi-geo-alt"></i> {{ actividad.lugar }}</p>
+  </div>
+  <div class="detalle__precio-caja">
+    <span class="detalle__precio">{{ actividad.precio }}</span>
+    {% if actividad.moneda %}<span class="detalle__moneda">{{ actividad.moneda }}</span>{% endif %}
+  </div>
+</header>
+
+<section class="galeria">
+  <div class="galeria__principal" style="background-image: url('{% static actividad.galeria.0 %}')">
+    <span class="galeria__contador">Foto 1 de {{ actividad.galeria|length }}</span>
+  </div>
+  <div class="galeria__miniaturas">
+    {% for foto in actividad.galeria|slice:"1:4" %}
+      <div class="galeria__mini" style="background-image: url('{% static foto %}')"></div>
+    {% endfor %}
+  </div>
+</section>
+
+<div class="row g-4">
+  <div class="col-lg-8">
+    <p class="detalle__etiqueta">Sobre la experiencia</p>
+    <h2 class="detalle__subtitulo">{{ actividad.subtitulo }}</h2>
+    {% for parrafo in actividad.parrafos %}
+      <p class="detalle__texto">{{ parrafo }}</p>
+    {% endfor %}
+
+    <hr class="detalle__linea">
+
+    <h3 class="detalle__incluye-titulo">¿Qué incluye?</h3>
+    <div class="row g-3">
+      {% for item in actividad.incluye %}
+        <div class="col-md-6">
+          <div class="detalle__item">
+            <span class="detalle__check"><i class="bi bi-check-lg"></i></span>
+            {{ item }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="detalle__recomendacion">
+      <p class="detalle__recomendacion-etiqueta">Recomendación</p>
+      <p class="mb-0">{{ actividad.recomendacion }}</p>
+    </div>
+  </div>
+
+  <aside class="col-lg-4">
+    <div class="panel">
+      <p class="panel__titulo">Detalles de la actividad</p>
+      <ul class="panel__lista">
+        <li>
+          <span class="panel__icono"><i class="bi bi-calendar3"></i></span>
+          <div><small>Fecha</small><strong>{{ actividad.fecha }}</strong></div>
+        </li>
+        <li>
+          <span class="panel__icono"><i class="bi bi-clock"></i></span>
+          <div><small>Horario y duración</small><strong>{{ actividad.horario }} · {{ actividad.duracion }}</strong></div>
+        </li>
+        <li>
+          <span class="panel__icono"><i class="bi bi-geo-alt"></i></span>
+          <div><small>Punto de encuentro</small><strong>{{ actividad.punto_encuentro }}</strong></div>
+        </li>
+        <li>
+          <span class="panel__icono"><i class="bi bi-people"></i></span>
+          <div><small>Disponibilidad</small><strong>{{ actividad.cupos }} cupos disponibles</strong></div>
+        </li>
+      </ul>
+
+      <div class="panel__total">
+        <small>Total por persona</small>
+        <strong>{{ actividad.precio }}</strong>
+        {% if actividad.moneda %}<span class="detalle__moneda">{{ actividad.moneda }}</span>{% endif %}
+      </div>
+
+      {% if actividad.modalidad != 'difusion' and actividad.cupos > 0 %}
+        <a href="#" class="panel__boton">Reservar ahora →</a>
+        <p class="panel__nota">Completa los datos de los asistentes para continuar.</p>
+      {% else %}
+        <p class="panel__nota">Esta actividad no está disponible para reservar.</p>
+      {% endif %}
+    </div>
+  </aside>
+</div>
+{% endblock %}
