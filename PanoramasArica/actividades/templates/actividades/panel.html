@@ -133,7 +133,66 @@
     </div>
 
     <div class="tab-pane fade" id="pane-reservas" role="tabpanel">
-      <p class="text-muted">Aquí irá la tabla de reservas y pagos.</p>
+      <section class="lista-card">
+        <div class="lista-card__cabecera lista-card__cabecera--columna">
+          <h2 class="lista-card__titulo">Reservas recientes</h2>
+          <small>Consulta asistentes y estado de pago</small>
+        </div>
+
+        <div class="tabla-scroll">
+          <table class="tabla-reservas">
+            <thead>
+              <tr>
+                <th>Reserva</th>
+                <th>Cliente</th>
+                <th>Actividad</th>
+                <th>Fecha</th>
+                <th>Personas</th>
+                <th>Total</th>
+                <th>Pago</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tabla-reservas__codigo">PA-1048</td>
+                <td class="tabla-reservas__cliente">Camila González</td>
+                <td class="tabla-reservas__suave">Avistamiento de aves costeras</td>
+                <td class="tabla-reservas__suave">14 jun 2025</td>
+                <td class="tabla-reservas__suave">2</td>
+                <td class="tabla-reservas__total">$24.000</td>
+                <td><span class="pago pago--pagado">Pagado</span></td>
+              </tr>
+              <tr>
+                <td class="tabla-reservas__codigo">PA-1047</td>
+                <td class="tabla-reservas__cliente">Felipe Muñoz</td>
+                <td class="tabla-reservas__suave">Trekking Cuevas de Anzota</td>
+                <td class="tabla-reservas__suave">8 jun 2025</td>
+                <td class="tabla-reservas__suave">1</td>
+                <td class="tabla-reservas__total">$18.000</td>
+                <td><span class="pago pago--pendiente">Pendiente</span></td>
+              </tr>
+              <tr>
+                <td class="tabla-reservas__codigo">PA-1041</td>
+                <td class="tabla-reservas__cliente">Daniela Soto</td>
+                <td class="tabla-reservas__suave">Avistamiento de aves costeras</td>
+                <td class="tabla-reservas__suave">14 jun 2025</td>
+                <td class="tabla-reservas__suave">3</td>
+                <td class="tabla-reservas__total">$36.000</td>
+                <td><span class="pago pago--pagado">Pagado</span></td>
+              </tr>
+              <tr>
+                <td class="tabla-reservas__codigo">PA-1036</td>
+                <td class="tabla-reservas__cliente">Tomás Herrera</td>
+                <td class="tabla-reservas__suave">Trekking Cuevas de Anzota</td>
+                <td class="tabla-reservas__suave">8 jun 2025</td>
+                <td class="tabla-reservas__suave">2</td>
+                <td class="tabla-reservas__total">$36.000</td>
+                <td><span class="pago pago--reembolsado">Reembolsado</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </div>
   </div>
 
