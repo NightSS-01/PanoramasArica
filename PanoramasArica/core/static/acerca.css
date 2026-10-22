@@ -333,3 +333,80 @@
 .acerca-cartel-fila {
   text-align: left;
 }
+
+/* Comité ejecutivo */
+.acerca-comite {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url('img/equipo-fondo.jpg') center / cover no-repeat,
+    linear-gradient(135deg, #eceff4, #f6f3f0);
+  padding: 4rem 1rem 5rem;
+}
+
+.acerca-comite__interior {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.acerca-comite__titulo {
+  margin-bottom: 2.5rem;
+}
+
+.acerca-comite__tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.acerca-comite__tabla td {
+  width: 50%;
+  border: 1px solid #e3e3e3;
+  vertical-align: middle;
+}
+
+.acerca-comite__logo {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.acerca-comite__logo img {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 126px;
+}
+
+.acerca-comite__celda-enlace {
+  padding: 1rem 2rem;
+}
+
+.acerca-comite__enlace {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  color: #1c1c1c;
+  text-decoration: none;
+}
+
+.acerca-comite__globo {
+  flex-shrink: 0;
+  color: #777;
+}
+
+.acerca-comite__url {
+  background: #f7f7f7;
+  padding: 0.9rem 1.7rem;
+  word-break: break-word;
+}
+
+.acerca-comite__enlace:hover .acerca-comite__url {
+  color: var(--color-acento, #ee4d07);
+}
+
+@media (max-width: 576px) {
+  .acerca-comite__celda-enlace { padding: 0.75rem 0.75rem; }
+  .acerca-comite__logo { padding: 1rem 0.5rem; }
+  .acerca-comite__url { padding: 0.6rem 0.9rem; font-size: 0.8rem; }
+  .acerca-comite__globo { display: none; }
+}
