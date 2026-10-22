@@ -211,3 +211,73 @@
     color: var(--color-acento, #ee4d07);
   }
 }
+
+/* Imagen del organigrama */
+.acerca-figura {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.acerca-figura img {
+  max-width: 100%;
+  height: auto;
+}
+
+.acerca-separador {
+  border: 0;
+  border-top: 1px solid #000;
+  opacity: 1;
+  margin: 2.5rem 0 0;
+}
+
+.acerca-body,
+.acerca-seccion {
+  background: #ffffff;
+}
+
+/* Equipo técnico */
+.acerca-equipo {
+  margin-top: 3rem;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url('img/equipo-fondo.jpg') center / cover no-repeat,
+    linear-gradient(135deg, #eceff4, #f6f3f0);
+  padding: 4rem 1rem 9rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+}
+
+.acerca-equipo__interior {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.acerca-equipo__grilla {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.acerca-persona {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1.25rem 1.25rem 2.5rem;
+}
+
+.acerca-persona__nombre {
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.4rem;
+}
+
+.acerca-persona__rol {
+  color: #444;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .acerca-equipo__grilla { grid-template-columns: 1fr; }
+  .acerca-equipo { padding-bottom: 6rem; }
+}
