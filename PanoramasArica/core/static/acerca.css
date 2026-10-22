@@ -100,14 +100,6 @@
   color: var(--color-acento, #ee4d07);
 }
 
-/* Barra: logo | botón alineado con el menú | espacio */
-.acerca-header__barra {
-  display: grid;
-  grid-template-columns: minmax(82px, 1fr) minmax(0, 640px) minmax(0, 1fr);
-  align-items: center;
-  padding: 1rem 3.5rem;
-}
-
 .acerca-logo {
   grid-column: 1;
   justify-self: start;
@@ -128,18 +120,38 @@
   justify-self: end;
 }
 
-/* Menú: el padding va en el interior, no en el collapse */
+/* ===== Encabezado: pantalla chica (por defecto) ===== */
+.acerca-header__barra {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 1rem 1.25rem;
+}
+
+.acerca-logo {
+  grid-column: 1;
+  display: block;
+  line-height: 0;
+}
+
+.acerca-burger {
+  grid-column: 2;
+  justify-self: end;
+}
+
+.acerca-colapso {
+  grid-column: 1 / -1;
+}
+
 .acerca-colapso.collapsing {
   transition: height 0.45s ease;
 }
 
 .acerca-colapso__interior {
-  padding: 0 3.5rem 1.5rem;
+  padding: 1rem 0 0.5rem;
 }
 
 .acerca-menu {
-  max-width: 640px;
-  margin: 0 auto;
   background: #fff;
   padding: 0.5rem 1.25rem;
   opacity: 0;
@@ -152,13 +164,50 @@
   transform: translateY(0);
 }
 
-/* Pantallas angostas */
-@media (max-width: 900px) {
+/* ===== Encabezado: pantalla ancha (menú en línea) ===== */
+@media (min-width: 992px) {
   .acerca-header__barra {
+    max-width: 1140px;
+    margin: 0 auto;
     grid-template-columns: auto 1fr;
-    padding: 1rem 1.25rem;
+    padding: 1rem;
   }
-  .acerca-burger { grid-column: 2; }
-  .acerca-colapso__interior { padding: 0 1.25rem 1.5rem; }
-  .acerca-menu { max-width: none; }
+
+  .acerca-burger {
+    display: none;
+  }
+
+  /* anula el collapse: siempre visible, en la misma fila que el logo */
+  .acerca-colapso,
+  .acerca-colapso.collapse:not(.show) {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    height: auto !important;
+    visibility: visible;
+  }
+
+  .acerca-colapso__interior {
+    padding: 0;
+  }
+
+  .acerca-menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.75rem;
+    background: none;
+    padding: 0;
+    opacity: 1;
+    transform: none;
+  }
+
+  .acerca-menu a {
+    color: #fff;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+  }
+
+  .acerca-menu a:hover {
+    color: var(--color-acento, #ee4d07);
+  }
 }
