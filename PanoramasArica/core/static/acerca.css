@@ -1,0 +1,164 @@
+@font-face {
+  font-family: 'Neue Kabel';
+  src: url('fonts/Neue Kabel W01 Regular.woff') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fuente para el contenido de la página (no el encabezado) */
+.acerca-fuente {
+  font-family: 'Neue Kabel', 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+}
+
+/* Bloque superior con imagen y corte diagonal */
+.acerca-hero {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url('img/acerca-fondo.jpg') center / cover no-repeat;
+  padding: 4rem 1rem 8rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+}
+
+/* Tarjeta translúcida */
+.acerca-tarjeta {
+  max-width: 1140px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 2rem 2rem 2.5rem;
+}
+
+.acerca-tarjeta__titulo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 1.75rem;
+}
+
+.acerca-tarjeta__texto {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  line-height: 1.6;
+}
+
+/* Sección siguiente */
+.acerca-seccion {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 3rem 1rem 4rem;
+}
+
+.acerca-seccion__titulo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+}
+
+.acerca-seccion__texto {
+  padding: 0 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 576px) {
+  .acerca-hero { padding: 2rem 0.75rem 5rem; }
+  .acerca-tarjeta { padding: 1.5rem 1rem; }
+  .acerca-tarjeta__titulo,
+  .acerca-seccion__titulo { font-size: 1.7rem; }
+}
+
+/* Encabezado azul marino */
+.acerca-header {
+  background: #02192a;
+  color: #fff;
+}
+
+/* Botón hamburguesa / cerrar */
+.acerca-burger {
+  background: none;
+  border: 0;
+  color: #fff;
+  padding: 0.5rem;
+  line-height: 0;
+}
+
+.acerca-burger__cerrar { display: none; }
+.acerca-burger[aria-expanded="true"] .acerca-burger__abrir { display: none; }
+.acerca-burger[aria-expanded="true"] .acerca-burger__cerrar { display: block; }
+
+/* Menú desplegable */
+
+.acerca-menu a {
+  display: block;
+  padding: 0.75rem 0;
+  color: #1f2d3a;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.acerca-menu a:hover {
+  color: var(--color-acento, #ee4d07);
+}
+
+/* Barra: logo | botón alineado con el menú | espacio */
+.acerca-header__barra {
+  display: grid;
+  grid-template-columns: minmax(82px, 1fr) minmax(0, 640px) minmax(0, 1fr);
+  align-items: center;
+  padding: 1rem 3.5rem;
+}
+
+.acerca-logo {
+  grid-column: 1;
+  justify-self: start;
+  display: block;
+  line-height: 0;
+}
+
+.acerca-logo img {
+  height: 82px;
+  width: auto;
+  display: block;
+}
+
+.acerca-logo:hover { opacity: 0.85; }
+
+.acerca-burger {
+  grid-column: 2;
+  justify-self: end;
+}
+
+/* Menú: el padding va en el interior, no en el collapse */
+.acerca-colapso.collapsing {
+  transition: height 0.45s ease;
+}
+
+.acerca-colapso__interior {
+  padding: 0 3.5rem 1.5rem;
+}
+
+.acerca-menu {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 0.5rem 1.25rem;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.acerca-colapso.show .acerca-menu {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pantallas angostas */
+@media (max-width: 900px) {
+  .acerca-header__barra {
+    grid-template-columns: auto 1fr;
+    padding: 1rem 1.25rem;
+  }
+  .acerca-burger { grid-column: 2; }
+  .acerca-colapso__interior { padding: 0 1.25rem 1.5rem; }
+  .acerca-menu { max-width: none; }
+}
