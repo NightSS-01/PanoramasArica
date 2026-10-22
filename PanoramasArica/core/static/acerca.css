@@ -281,3 +281,55 @@
   .acerca-equipo__grilla { grid-template-columns: 1fr; }
   .acerca-equipo { padding-bottom: 6rem; }
 }
+
+.acerca-logos {
+  border-top: 1px solid #cfcfcf;
+  border-bottom: 1px solid #cfcfcf;
+  background: #ffffff;
+  padding: 3rem 1rem;
+}
+
+.acerca-logos__interior {
+  max-width: 1140px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.acerca-logos__interior img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Segundo grupo de logos: sin línea superior (ya la da la sección anterior) */
+.acerca-logos--continuacion {
+  border-top: 2;
+}
+
+/* Cartelito */
+.acerca-logos__interior {
+  position: relative;
+}
+
+.acerca-cartel {
+  display: inline-block;
+  background: #ffffff;
+  color: #1f5fa8;
+  font-size: 1.15rem;
+  padding: 0.6rem 1.6rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .acerca-cartel {
+    position: static;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.acerca-cartel-fila {
+  text-align: left;
+}
