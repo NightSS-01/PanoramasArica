@@ -9,39 +9,7 @@
   <link rel="stylesheet" href="{% static 'style.css' %}">
   <link rel="stylesheet" href="{% static 'acerca.css' %}">
 </head>
-<body class="d-flex flex-column min-vh-100">
-  <header class="acerca-header sticky-top">
-    <div class="acerca-header__barra">
-      <a href="{% url 'inicio' %}" class="acerca-logo" aria-label="Panoramas Arica, ir al inicio">
-        <img src="{% static 'img/logo-acerca.png' %}" alt="Panoramas Arica" height="82">
-      </a>
-
-      <button class="acerca-burger" type="button"
-              data-bs-toggle="collapse" data-bs-target="#menu-acerca"
-              aria-controls="menu-acerca" aria-expanded="false" aria-label="Abrir o cerrar menú">
-        <svg class="acerca-burger__abrir" width="28" height="28" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-          <path d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-        <svg class="acerca-burger__cerrar" width="28" height="28" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-          <path d="M5 5l14 14M19 5L5 19"/>
-        </svg>
-      </button>
-
-      <div class="collapse acerca-colapso" id="menu-acerca">
-        <div class="acerca-colapso__interior">
-          <nav class="acerca-menu" aria-label="Menú principal">
-            <a href="{% url 'inicio' %}">Inicio</a>
-            <a href="#">Actividades</a>
-            <a href="{% url 'acerca' %}">Acerca de</a>
-            <a href="#">Contacto</a>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
-
+<body class="d-flex flex-column min-vh-100 acerca-body">
   <main class="flex-grow-1 acerca-fuente">
     <section class="acerca-hero">
       <div class="acerca-tarjeta">
@@ -66,8 +34,6 @@
       </p>
     </section>
   </main>
-
-  {% include 'includes/footer.html' %}
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
