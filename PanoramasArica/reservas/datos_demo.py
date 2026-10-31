@@ -1,0 +1,28 @@
+RESERVAS_DEMO = [
+    {
+        'codigo': 'PA-240614-108',
+        'titulo': 'Avistamiento de aves costeras',
+        'proveedor': 'Norte Vivo Experiencias',
+        'imagen': 'actividades/img/aves.jpg',
+        'estado': 'pendiente_pago',
+        'estado_texto': 'Pendiente de pago',
+        'total': '$12.000',
+        'fecha_hora': '14 jun · 07:00',
+        'punto_encuentro': 'Humedal Río Lluta',
+        'asistentes': 1,
+        'proxima': True,
+    },
+    {
+        'codigo': 'PA-240502-071',
+        'titulo': 'Trekking Cuevas de Anzota',
+        'proveedor': 'Norte Vivo Experiencias',
+        'imagen': 'actividades/img/cuevas.jpg',
+        'estado': 'realizada',
+        'estado_texto': 'Realizada',
+        'total': '$18.000',
+        'fecha_hora': '02 may · 09:30',
+        'punto_encuentro': 'Cuevas de Anzota',
+        'asistentes': 2,
+        'proxima': False,
+    },
+]

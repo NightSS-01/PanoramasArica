@@ -1,0 +1,251 @@
+.mr-encabezado {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+   gap: 1rem;
+   flex-wrap: wrap;
+   margin-bottom: 2rem;
+}
+
+.mr-etiqueta {
+   color: var(--color-acento, #ee4d07);
+   font-size: .7rem;
+   letter-spacing: .15em;
+   font-weight: 700;
+   margin-bottom: .25rem;
+}
+
+.mr-titulo {
+   font-size: 2.5rem;
+   font-weight: 700;
+   margin: 0;
+}
+
+.mr-subtitulo {
+   color: #6b665f;
+   margin: .5rem 0 0;
+}
+
+.mr-boton-claro {
+   display: inline-flex;
+   align-items: center;
+   gap: .5rem;
+   background: #fff;
+   border: 1px solid #e8e6e1;
+   border-radius: 999px;
+   padding: .6rem 1.25rem;
+   color: #1a1a1a;
+   font-weight: 600;
+   font-size: .9rem;
+   text-decoration: none;
+}
+
+.mr-boton {
+   display: inline-flex;
+   align-items: center;
+   gap: .5rem;
+   background: var(--color-acento, #ee4d07);
+   color: #fff;
+   border-radius: 999px;
+   padding: .7rem 1.5rem;
+   font-weight: 600;
+   text-decoration: none;
+   box-shadow: 0 6px 16px rgba(238, 77, 7, .3);
+}
+
+.mr-boton:hover {
+   color: #fff;
+   opacity: .92;
+}
+
+.mr-pestanas {
+   display: flex;
+   gap: 1.5rem;
+   border-bottom: 1px solid #e8e6e1;
+   margin-bottom: 1.5rem;
+}
+
+.mr-pestana {
+   padding: .75rem 1rem;
+   color: #8a847c;
+   font-weight: 600;
+   font-size: .9rem;
+   text-decoration: none;
+   border-bottom: 2px solid transparent;
+   margin-bottom: -1px;
+}
+
+.mr-pestana--activa {
+   color: var(--color-acento, #ee4d07);
+   border-bottom-color: var(--color-acento, #ee4d07);
+}
+
+.mr-contador {
+   background: #ffe8d9;
+   color: var(--color-acento, #ee4d07);
+   border-radius: 999px;
+   padding: .1rem .5rem;
+   font-size: .7rem;
+   margin-left: .35rem;
+}
+
+.mr-tarjeta {
+   display: flex;
+   background: #fff;
+   border: 1px solid #e8e6e1;
+   border-radius: 28px;
+   overflow: hidden;
+   margin-bottom: 1.5rem;
+}
+
+.mr-tarjeta__imagen {
+   position: relative;
+   flex: 0 0 300px;
+   background-size: cover;
+   background-position: center;
+   min-height: 260px;
+}
+
+.mr-tarjeta__cuerpo {
+   flex: 1;
+   padding: 2rem;
+   display: flex;
+   flex-direction: column;
+   gap: 1.25rem;
+}
+
+.mr-tarjeta__superior {
+   display: flex;
+   justify-content: space-between;
+   gap: 1rem;
+   flex-wrap: wrap;
+}
+
+.mr-tarjeta__titulo {
+   font-size: 1.5rem;
+   font-weight: 700;
+   margin: .25rem 0;
+}
+
+.mr-codigo {
+   color: var(--color-acento, #ee4d07);
+   font-size: .7rem;
+   letter-spacing: .12em;
+   font-weight: 700;
+   margin: 0;
+}
+
+.mr-proveedor {
+   color: #6b665f;
+   font-size: .9rem;
+   margin: 0;
+}
+
+.mr-total {
+   text-align: right;
+}
+
+.mr-total small {
+   color: #8a847c;
+   font-size: .75rem;
+}
+
+.mr-total p {
+   font-size: 1.5rem;
+   font-weight: 700;
+   margin: 0;
+}
+
+.mr-total span {
+   font-size: .7rem;
+   color: #8a847c;
+   font-weight: 500;
+}
+
+.mr-badge {
+   position: absolute;
+   top: 1rem;
+   left: 1rem;
+   border-radius: 999px;
+   padding: .3rem .8rem;
+   font-size: .65rem;
+   font-weight: 700;
+   letter-spacing: .05em;
+   text-transform: uppercase;
+}
+
+.mr-badge--pendiente_pago {
+   background: #fbbf24;
+   color: #1a1a1a;
+}
+
+.mr-badge--realizada {
+   background: #e5e7eb;
+   color: #374151;
+}
+
+.mr-datos {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 1rem;
+   background: #f7f6f3;
+   border-radius: 18px;
+   padding: 1.25rem;
+}
+
+.mr-dato {
+   display: flex;
+   gap: .75rem;
+   align-items: flex-start;
+}
+
+.mr-dato i {
+   color: var(--color-acento, #ee4d07);
+   font-size: 1.1rem;
+}
+
+.mr-dato small {
+   display: block;
+   color: #8a847c;
+   font-size: .7rem;
+}
+
+.mr-dato strong {
+   font-size: .9rem;
+}
+
+.mr-vacio {
+   text-align: center;
+   padding: 4rem 1rem;
+   color: #6b665f;
+}
+
+.mr-vacio i {
+   font-size: 2.5rem;
+   color: #c9c4bb;
+}
+
+.mr-nota {
+   text-align: center;
+   color: #8a847c;
+   font-size: .75rem;
+}
+
+@media (max-width: 767px) {
+   .mr-tarjeta {
+      flex-direction: column;
+   }
+
+   .mr-tarjeta__imagen {
+      flex: 0 0 200px;
+      min-height: 200px;
+   }
+
+   .mr-datos {
+      grid-template-columns: 1fr;
+   }
+
+   .mr-total {
+      text-align: left;
+   }
+}
