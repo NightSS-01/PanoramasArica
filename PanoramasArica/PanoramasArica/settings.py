@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'core',
     'cuentas',
     'actividades',
+    'reservas',
 ]
 AUTH_USER_MODEL = 'cuentas.Usuario'
 
