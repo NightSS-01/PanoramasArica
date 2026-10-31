@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'cuentas',
+    'actividades',
+    'reservas',
 ]
 AUTH_USER_MODEL = 'cuentas.Usuario'
 

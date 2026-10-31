@@ -9,11 +9,10 @@ body {
   background: var(--color-fondo);
   color: var(--color-texto);
 }
-
 .app-navbar {
-  background: var(--color-fondo);
-  border-bottom: 1px solid var(--color-borde);
-  padding-block: 0.9rem;
+  background: #F1F5F9;
+  border-bottom: 1px solid;
+  padding-block: 0.3rem;
 }
 
 .brand-kicker {
@@ -272,15 +271,15 @@ body {
 
 .hero {
   min-height: 600px;
-  border-radius: 32px;
-  padding: 3rem;
+  border-radius: 0;
+  padding: 3rem max(3rem, calc((100vw - 1320px) / 2));
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background:
     linear-gradient(90deg, rgba(20, 16, 12, 0.55), rgba(20, 16, 12, 0.1)),
-    url('image/imagenlauca.svg') center / cover no-repeat;
+    url('image/imagen_hero.jpg') bottom / cover no-repeat;
 }
 
 .hero__contenido {
@@ -314,6 +313,8 @@ body {
 }
 
 .buscador {
+  width: 100% ;
+  margin-inline: auto;
   display: flex;
   align-items: stretch;
   max-width: 1000px;
