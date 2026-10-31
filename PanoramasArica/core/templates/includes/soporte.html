@@ -1,0 +1,53 @@
+<button type="button" class="soporte__boton" data-bs-toggle="modal" data-bs-target="#modalSoporte">
+  <i class="bi bi-chat-dots"></i> Soporte
+</button>
+
+<div class="modal fade" id="modalSoporte" tabindex="-1" aria-labelledby="modalSoporteTitulo" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content soporte__contenido">
+
+      <div class="modal-header border-0">
+        <div>
+          <p class="soporte__etiqueta">¿Necesitas ayuda?</p>
+          <h2 class="modal-title soporte__titulo" id="modalSoporteTitulo">Contáctanos</h2>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <form onsubmit="return false;">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="soporte-nombre" class="form-label">Nombre</label>
+            <input type="text" id="soporte-nombre" class="form-control" placeholder="Tu nombre">
+          </div>
+
+          <div class="mb-3">
+            <label for="soporte-correo" class="form-label">Correo electrónico</label>
+            <input type="email" id="soporte-correo" class="form-control" placeholder="tucorreo@ejemplo.com">
+          </div>
+
+          <div class="mb-3">
+            <label for="soporte-asunto" class="form-label">Asunto</label>
+            <select id="soporte-asunto" class="form-select">
+              <option value="">Selecciona un asunto</option>
+              <option>Consulta sobre una actividad</option>
+              <option>Problema con mi cuenta</option>
+              <option>Otro</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="soporte-mensaje" class="form-label">Mensaje</label>
+            <textarea id="soporte-mensaje" class="form-control" rows="4" placeholder="Cuéntanos en qué podemos ayudarte"></textarea>
+          </div>
+        </div>
+
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-pill btn-outline-pill" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-pill btn-accent">Enviar consulta</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

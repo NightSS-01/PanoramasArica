@@ -53,19 +53,16 @@
       <h2 class="panoramas__titulo">Panoramas Destacados</h2>
       <p class="panoramas__subtitulo">Ideas para salir de la rutina y descubrir otra cara de Arica.</p>
     </div>
-    <p class="panoramas__contador">3 actividades encontradas</p>
+        <p class="panoramas__contador">{{ actividades|length }} actividades encontradas</p>
   </div>
 
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-    <div class="col">
-      {% include 'includes/tarjeta_actividad.html' with imagen="image/imagenlauca.svg" badge="Reservable" badge_clase="" lugar="Lago Chungara" fecha="Sáb, 24 mayo" horario="09:00 — 18:00" titulo="Ruta ancestral por el Lago Chungara" descripcion="Descubre animales, paisajes, flora y la historia viva del lago y sus volcanes junto a un guía local." precio="$130.000" moneda="CLP" cupos="8" %}
-    </div>
-    <div class="col">
-      {% include 'includes/tarjeta_actividad.html' with imagen="image/playachinchorro.svg" badge="Reservable" badge_clase="" lugar="Playa Chinchorro" fecha="Dom, 25 mayo" horario="07:30 — 10:00" titulo="Surf al amanecer en Chinchorro" descripcion="Una sesión para todos los niveles con instructores certificados, tabla y traje incluidos." precio="$25.000" moneda="CLP" cupos="5" %}
-    </div>
-    <div class="col">
-      {% include 'includes/tarjeta_actividad.html' with imagen="image/atardecermorro.svg" badge="Reservable sin costo" badge_clase="tarjeta__badge--claro" lugar="Morro de Arica" fecha="Vie, 30 mayo" horario="17:30 — 19:30" titulo="Atardecer desde el Morro" descripcion="Caminata cultural guiada para contemplar la ciudad, el océano y un atardecer inolvidable." precio="Gratis" moneda="" cupos="12" %}
-    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for actividad in actividades %}
+      <div class="col">
+        {% include 'includes/tarjeta_actividad.html' with a=actividad %}
+      </div>
+    {% endfor %}
+  </div>
   </div>
 </section>
 {% endblock %}

@@ -1,0 +1,190 @@
+/* ===== Página de detalle ===== */
+
+.detalle__volver {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #6b665f;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.detalle__cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detalle__badge {
+  position: static;
+  display: inline-block;
+}
+
+.detalle__titulo {
+  margin: 0.75rem 0 0.25rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+}
+
+.detalle__lugar {
+  margin: 0;
+  color: #6b665f;
+}
+
+.detalle__lugar i {
+  color: var(--color-acento);
+}
+
+.detalle__precio-caja {
+  background: #fff;
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+  padding: 0.6rem 1.1rem;
+  white-space: nowrap;
+}
+
+.detalle__precio {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.detalle__moneda {
+  margin-left: 0.35rem;
+  color: #8a847c;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.galeria__principal {
+  position: relative;
+  min-height: 1000px;
+  border-radius: 24px;
+  background-size: cover;
+  background-position: center;
+}
+
+.galeria__contador {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  background: rgba(20, 16, 12, 0.7);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.galeria__miniaturas {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.galeria__mini {
+  min-height: 130px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 767px) {
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria__principal {
+    min-height: 260px;
+  }
+
+  .galeria__miniaturas {
+    grid-template-rows: none;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .galeria__mini {
+    min-height: 90px;
+  }
+}
+
+.detalle__etiqueta {
+  margin: 0 0 0.5rem;
+  color: var(--color-acento);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.detalle__subtitulo {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.detalle__texto {
+  color: #6b665f;
+  line-height: 1.8;
+}
+
+.detalle__linea {
+  border-color: var(--color-borde);
+  opacity: 1;
+  margin: 2rem 0;
+}
+
+.detalle__incluye-titulo {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.detalle__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #fff;
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.detalle__check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #fff1e8;
+  color: var(--color-acento);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.detalle__recomendacion {
+  margin-top: 2rem;
+  background: #1c1815;
+  color: #fff;
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.detalle__recomendacion-etiqueta {
+  margin: 0 0 0.5rem;
+  color: var(--color-acento);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
